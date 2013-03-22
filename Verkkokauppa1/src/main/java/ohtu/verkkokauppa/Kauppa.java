@@ -8,18 +8,22 @@ public class Kauppa implements KauppaInterface {
     private Viitegeneraattori viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa() {
-        varasto = Varasto.getInstance();
-        pankki = Pankki.getInstance();
-        viitegeneraattori = Viitegeneraattori.getInstance();
+    public Kauppa(Varasto varasto, Pankki pankki, Viitegeneraattori viitegeneraattori) {
+        this.varasto = varasto;
+        this.pankki = pankki;
+        this.viitegeneraattori = viitegeneraattori;
+        
+//        varasto = Varasto.getInstance();
+//        pankki = Pankki.getInstance();
+//        viitegeneraattori = Viitegeneraattori.getInstance();
         kaupanTili = "33333-44455";
     }
 
-    public Kauppa(Varasto instance, Pankki instance0, Viitegeneraattori instance1) {
-        this.varasto = instance;
-        this.pankki = instance0;
-        this.viitegeneraattori = instance1;
-    }
+//    public Kauppa(Varasto instance, Pankki instance0, Viitegeneraattori instance1) {
+//        this.varasto = instance;
+//        this.pankki = instance0;
+//        this.viitegeneraattori = instance1;
+//    }
 
     @Override
     public void aloitaAsiointi() {
