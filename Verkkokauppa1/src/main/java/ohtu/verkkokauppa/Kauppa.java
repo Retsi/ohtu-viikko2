@@ -8,9 +8,9 @@ public class Kauppa implements KauppaInterface {
     private Viitegeneraattori viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa(Varasto varasto, Pankki pankki, Viitegeneraattori viitegeneraattori) {
-        this.varasto = varasto;
-        this.pankki = pankki;
+    public Kauppa(VarastoInterface varasto, PankkiInterface pankki, Viitegeneraattori viitegeneraattori) {
+        this.varasto = (Varasto) varasto;
+        this.pankki = (Pankki) pankki;
         this.viitegeneraattori = viitegeneraattori;
         
 //        varasto = Varasto.getInstance();
